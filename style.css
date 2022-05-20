@@ -45,6 +45,7 @@ main {
   z-index: 2;
   backdrop-filter: blur(2rem);
   display: flex;
+  flex-wrap:wrap;
 }
 .circle1,
 .circle2 {
@@ -102,12 +103,16 @@ main {
   color: white;
   padding: 1rem;
   position: relative;
+  margin:1rem;
+  display:flex;
+  flex-direction:row;
 }
 
-.pro img {
-  position: absolute;
+.pro *{
+  /* position: absolute;
   top: -10%;
-  right: 10%;
+  right: 10%; */
+  margin:auto;
 }
 .pro h2 {
   width: 40%;
@@ -152,6 +157,9 @@ main {
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   justify-content: space-between;
 }
+.card img{
+  height:100%;
+}
 
 .progress {
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
@@ -160,6 +168,7 @@ main {
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+  min-height:10%;
 }
 .progress::after {
   content: "";
@@ -180,4 +189,43 @@ main {
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width:600px){
+  main{
+    width:100vw;
+    
+  }
+  .glass{
+    width:95%;
+    flex-wrap:wrap;
+  }
+  .dashboard .games{
+    width:80%;
+  }
+  .games{
+    margin:1rem;
+  }
+  .card{
+    padding:1.5rem;
+  }
+  .status input{
+    width:90%;
+    margin:0 1rem 0 1rem;
+  }
+  .status h1{
+    text-align:center;
+    margin: auto;
+  }
+  h2{
+    font-size:1.25rem;
+  }
+  .percentage{
+    margin-left:.2rem;
+  }
+  .card img{
+    height:auto;
+    width:105px;
+    margin-right:.5rem;
+  }
 }
